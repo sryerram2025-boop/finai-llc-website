@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { FaArrowRight, FaPlay } from 'react-icons/fa'
+import Weather from './Weather'
 
 const Hero = () => {
   return (
@@ -109,6 +110,16 @@ const Hero = () => {
           </motion.div>
         </motion.div>
       </div>
+
+      {/* Weather Widget */}
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 1.1 }}
+        className="absolute top-6 right-6 z-20 w-72 hidden lg:block"
+      >
+        <Weather />
+      </motion.div>
 
       {/* Floating Elements */}
       <motion.div
