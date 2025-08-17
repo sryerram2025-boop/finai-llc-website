@@ -30,10 +30,10 @@ const About = () => {
 
   const team = [
     {
-      name: 'Alex Johnson',
-      role: 'Lead Developer',
+      name: 'Sridhar Yerram',
+      role: 'Founder & CEO',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-      bio: 'Full-stack developer with 8+ years of experience in React, Node.js, and cloud technologies.'
+      bio: 'Visionary leader and entrepreneur with expertise in AI, fintech, and full-stack development. Leading FinAI LLC to deliver innovative solutions.'
     },
     {
       name: 'Sarah Chen',
