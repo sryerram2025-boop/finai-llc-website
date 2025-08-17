@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { FaArrowRight, FaPlay } from 'react-icons/fa'
-import Weather from './Weather'
+import TimeDisplay from './TimeDisplay'
 
 const Hero = () => {
   return (
@@ -88,12 +88,22 @@ const Hero = () => {
             </motion.a>
           </motion.div>
 
-          {/* Stats */}
+          {/* Time Display */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.9 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 pt-12 border-t border-white/20"
+            className="mt-16 flex justify-center"
+          >
+            <TimeDisplay />
+          </motion.div>
+
+          {/* Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.1 }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-12 border-t border-white/20"
           >
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">150+</div>
@@ -111,15 +121,7 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Weather Widget */}
-      <motion.div
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, delay: 1.1 }}
-        className="absolute top-6 right-6 z-20 w-64 md:w-72"
-      >
-        <Weather />
-      </motion.div>
+
 
       {/* Floating Elements */}
       <motion.div
