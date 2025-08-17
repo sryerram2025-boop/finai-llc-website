@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { FaLocationDot, FaTemperatureHigh, FaEye, FaWind, FaDroplet } from 'react-icons/fa6'
+import { FaLocationDot, FaEye, FaWind, FaDroplet } from 'react-icons/fa6'
 import { WiDaySunny, WiCloudy, WiRain, WiSnow, WiThunderstorm, WiNightClear } from 'react-icons/wi'
 
 interface WeatherData {
