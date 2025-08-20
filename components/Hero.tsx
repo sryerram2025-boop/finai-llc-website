@@ -34,7 +34,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium mb-8"
           >
-            🚀 Transforming Ideas into Digital Reality
+            💳 Smarter ISO 20022 Payments
           </motion.div>
 
           {/* Main Headline */}
@@ -44,11 +44,11 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
           >
-            We Build
+            Financial AI
             <span className="block gradient-text">
-              Exceptional
+              Solutions
             </span>
-            Web Experiences
+            That Scale
           </motion.h1>
 
           {/* Subtitle */}
@@ -58,7 +58,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-xl md:text-2xl text-primary-100 mb-12 max-w-3xl mx-auto leading-relaxed"
           >
-            From stunning websites to powerful web applications, we create digital solutions that captivate users and drive business growth.
+            Revolutionizing payment systems with AI-powered ISO 20022 solutions. Building secure, compliant, and intelligent financial technology for the modern economy.
           </motion.p>
 
           {/* CTA Buttons */}
