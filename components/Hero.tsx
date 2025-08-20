@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { FaArrowRight, FaPlay } from 'react-icons/fa'
 import TimeDisplay from './TimeDisplay'
+import WeatherWidget from './WeatherWidget'
 
 const Hero = () => {
   return (
@@ -88,14 +89,15 @@ const Hero = () => {
             </motion.a>
           </motion.div>
 
-          {/* Time Display */}
+          {/* Time and Weather Display */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.9 }}
-            className="mt-16 flex justify-center"
+            className="mt-16 flex flex-col lg:flex-row gap-6 justify-center items-center"
           >
             <TimeDisplay />
+            <WeatherWidget />
           </motion.div>
 
           {/* Stats */}
