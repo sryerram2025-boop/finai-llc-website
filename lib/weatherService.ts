@@ -79,8 +79,8 @@ class WeatherService {
    * Replace this with actual API integration (OpenWeatherMap, WeatherAPI, etc.)
    */
   private async fetchMockWeatherData(location: string): Promise<WeatherData> {
-    // Simulate API delay
-    await new Promise(resolve => setTimeout(resolve, 500))
+    // Simulate API delay (reduced for better UX)
+    await new Promise(resolve => setTimeout(resolve, 200))
 
     const baseTemp = location.toLowerCase().includes('pittsburgh') ? 45 : 50
     const conditions = ['Sunny', 'Partly Cloudy', 'Cloudy', 'Light Rain', 'Snow']
