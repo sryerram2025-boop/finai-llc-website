@@ -1,7 +1,7 @@
 # FinAI LLC Landing Page
 
 A modern, responsive landing page for FinAI LLC built with Next.js, TypeScript, and Tailwind CSS.
-
+tyoescript
 ## 🚀 Features
 
 - **Modern Design**: Clean, professional design with smooth animations

@@ -88,10 +88,10 @@ const About = () => {
               Founded in 2019, FinAI LLC started with a simple mission: to help businesses succeed online through exceptional web development and design. What began as a small team of passionate developers has grown into a full-service digital agency.
             </p>
               <p>
-                We believe that great websites are more than just code and pixels – they're powerful tools that can transform businesses and connect people. Our team combines technical expertise with creative vision to deliver solutions that not only look amazing but also drive real results.
+                We believe that great websites are more than just code and pixels – they&apos;re powerful tools that can transform businesses and connect people. Our team combines technical expertise with creative vision to deliver solutions that not only look amazing but also drive real results.
               </p>
               <p>
-                Today, we've had the privilege of working with over 150 clients, from startups to established enterprises, helping them achieve their digital goals and grow their online presence.
+                Today, we&apos;ve had the privilege of working with over 150 clients, from startups to established enterprises, helping them achieve their digital goals and grow their online presence.
               </p>
             </div>
           </motion.div>
