@@ -1,6 +1,58 @@
-# FinAI LLC Landing Page
+# 🏦 FinAI LLC - Official Website
 
-A modern, responsive landing page for FinAI LLC built with Next.js, TypeScript, and Tailwind CSS.
+A modern, AI-focused fintech company website built with Next.js, TypeScript, and Tailwind CSS. Features smooth animations with Framer Motion and a professional design showcasing AI financial solutions.
+
+## 🚀 Quick Start
+
+```bash
+# Start development
+npm run dev
+
+# Quick deployment
+npm run deploy
+
+# Quick update (for small changes)
+npm run quick-update
+
+# Check status
+npm run status
+```
+
+## 📝 Easy Content Updates
+
+**Main content file**: `data/siteConfig.js`
+
+Edit this file to update:
+- Company information
+- Services and features  
+- Team members
+- Portfolio projects
+- Contact details
+
+## 🌐 Live Website
+
+**Production**: https://sryerram2025-boop.github.io/finai-llc-website/
+
+## 📚 Documentation
+
+- **Full maintenance guide**: `MAINTENANCE-GUIDE.md`
+- **Quick deploy script**: `scripts/quick-deploy.sh`
+
+## 🛠️ Sustainable Workflow
+
+1. **Edit content** in `data/siteConfig.js`
+2. **Test locally**: `npm run dev` 
+3. **Deploy**: `npm run deploy` or `npm run quick-update`
+4. **Monitor**: Automatic deployment via GitHub Actions
+
+## 💡 Built for Growth
+
+This website is designed to scale with your business:
+- ✅ Easy content management
+- ✅ Automatic deployments  
+- ✅ Mobile responsive
+- ✅ SEO optimized
+- ✅ Performance focused
 tyoescript
 ## 🚀 Features
 

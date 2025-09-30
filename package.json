@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "./scripts/quick-deploy.sh",
+    "quick-update": "git add . && git commit -m 'Quick update' && git push origin main",
+    "backup": "git add . && git commit -m 'Backup: $(date)' && git push origin main",
+    "status": "git status && echo '\n🌐 Live site: https://sryerram2025-boop.github.io/finai-llc-website/'"
   },
   "dependencies": {
     "framer-motion": "^10.16.16",
