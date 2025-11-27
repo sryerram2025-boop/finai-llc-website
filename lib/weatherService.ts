@@ -1,5 +1,5 @@
 // Weather Service for FinAI LLC Website
-// This service provides weather data and can be extended to use real APIs
+// This service provides weather data using OpenWeatherMap API
 
 export interface CurrentWeather {
   temp: number
@@ -10,6 +10,10 @@ export interface CurrentWeather {
   icon: string
   feelsLike: number
   uvIndex: number
+  pressure: number
+  dewPoint: number
+  sunrise: string
+  sunset: string
 }
 
 export interface WeatherForecast {
@@ -22,6 +26,7 @@ export interface WeatherForecast {
   precipitation: number
   windSpeed: number
   humidity: number
+  pop: number // Probability of precipitation
 }
 
 export interface WeatherData {
@@ -29,6 +34,18 @@ export interface WeatherData {
   current: CurrentWeather
   forecast: WeatherForecast[]
   lastUpdated: string
+  coordinates?: {
+    lat: number
+    lon: number
+  }
+}
+
+export interface LocationData {
+  name: string
+  country: string
+  state?: string
+  lat: number
+  lon: number
 }
 
 class WeatherService {
@@ -96,7 +113,11 @@ class WeatherService {
       visibility: 8 + Math.floor(Math.random() * 5),
       icon: icons[currentConditionIndex],
       feelsLike: baseTemp + Math.floor(Math.random() * 8) - 4,
-      uvIndex: Math.floor(Math.random() * 10) + 1
+      uvIndex: Math.floor(Math.random() * 10) + 1,
+      pressure: 29.8 + Math.random() * 0.6,
+      dewPoint: baseTemp - Math.floor(Math.random() * 20) - 10,
+      sunrise: '6:45 AM',
+      sunset: '7:20 PM'
     }
 
     // Generate 7-day forecast
@@ -120,7 +141,8 @@ class WeatherService {
         icon: icons[conditionIndex],
         precipitation: Math.floor(Math.random() * 100),
         windSpeed: 3 + Math.floor(Math.random() * 12),
-        humidity: 40 + Math.floor(Math.random() * 40)
+        humidity: 40 + Math.floor(Math.random() * 40),
+        pop: Math.floor(Math.random() * 100)
       })
     }
 

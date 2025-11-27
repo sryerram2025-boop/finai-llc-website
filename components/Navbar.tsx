@@ -3,11 +3,13 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { FaBars, FaTimes } from 'react-icons/fa'
+import { FaBars, FaTimes, FaSearch } from 'react-icons/fa'
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const [searchQuery, setSearchQuery] = useState('')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,9 +23,38 @@ const Navbar = () => {
     { name: 'Home', href: '#home' },
     { name: 'Services', href: '#services' },
     { name: 'Portfolio', href: '#portfolio' },
+    { name: 'Stocks', href: '#stock-portfolio' },
+    { name: 'Analysis', href: '#stock-ticker' },
     { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' },
   ]
+
+  // Search functionality
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (searchQuery.trim()) {
+      // Simple search - scroll to section or show results
+      const searchLower = searchQuery.toLowerCase()
+      if (searchLower.includes('service') || searchLower.includes('ai') || searchLower.includes('payment')) {
+        document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })
+      } else if (searchLower.includes('analysis') || searchLower.includes('prediction') || searchLower.includes('ticker')) {
+        document.getElementById('stock-ticker')?.scrollIntoView({ behavior: 'smooth' })
+      } else if (searchLower.includes('stock') || searchLower.includes('investment') || searchLower.includes('trading')) {
+        document.getElementById('stock-portfolio')?.scrollIntoView({ behavior: 'smooth' })
+      } else if (searchLower.includes('portfolio') || searchLower.includes('work') || searchLower.includes('project')) {
+        document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })
+      } else if (searchLower.includes('about') || searchLower.includes('team') || searchLower.includes('company')) {
+        document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })
+      } else if (searchLower.includes('contact') || searchLower.includes('hire') || searchLower.includes('get started')) {
+        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+      } else {
+        // Default to services for general searches
+        document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })
+      }
+      setSearchQuery('')
+      setIsSearchOpen(false)
+    }
+  }
 
   return (
     <motion.nav

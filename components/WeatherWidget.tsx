@@ -31,12 +31,16 @@ const WeatherWidget = () => {
             visibility: 10,
             icon: 'partly-cloudy',
             feelsLike: 75,
-            uvIndex: 5
+            uvIndex: 5,
+            pressure: 30.12,
+            dewPoint: 58,
+            sunrise: '6:45 AM',
+            sunset: '7:20 PM'
           },
           forecast: [
-            { date: '2025-09-30', day: 'Today', high: 75, low: 60, condition: 'Sunny', icon: 'sunny', precipitation: 10, windSpeed: 8, humidity: 65 },
-            { date: '2025-10-01', day: 'Tomorrow', high: 78, low: 62, condition: 'Partly Cloudy', icon: 'partly-cloudy', precipitation: 20, windSpeed: 10, humidity: 70 },
-            { date: '2025-10-02', day: 'Wednesday', high: 73, low: 58, condition: 'Cloudy', icon: 'cloudy', precipitation: 40, windSpeed: 12, humidity: 75 }
+            { date: '2025-09-30', day: 'Today', high: 75, low: 60, condition: 'Sunny', icon: 'sunny', precipitation: 10, windSpeed: 8, humidity: 65, pop: 10 },
+            { date: '2025-10-01', day: 'Tomorrow', high: 78, low: 62, condition: 'Partly Cloudy', icon: 'partly-cloudy', precipitation: 20, windSpeed: 10, humidity: 70, pop: 20 },
+            { date: '2025-10-02', day: 'Wednesday', high: 73, low: 58, condition: 'Cloudy', icon: 'cloudy', precipitation: 40, windSpeed: 12, humidity: 75, pop: 40 }
           ],
           lastUpdated: new Date().toISOString()
         })

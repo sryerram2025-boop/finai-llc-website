@@ -34,7 +34,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium mb-8"
           >
-            💳 Smarter ISO 20022 Payments
+            🤖 AI-Powered Stock Analysis & Predictions
           </motion.div>
 
           {/* Main Headline */}
@@ -58,7 +58,8 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-xl md:text-2xl text-primary-100 mb-12 max-w-3xl mx-auto leading-relaxed"
           >
-            Revolutionizing payment systems with AI-powered ISO 20022 solutions. Building secure, compliant, and intelligent financial technology for the modern economy.
+            Revolutionizing financial technology with cutting-edge AI solutions. 
+            Advanced stock predictions, real-time portfolio tracking, and intelligent options analysis powered by machine learning.
           </motion.p>
 
           {/* CTA Buttons */}

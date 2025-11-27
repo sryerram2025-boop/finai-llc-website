@@ -125,6 +125,88 @@ export const siteConfig = {
     // Add more projects here
   ],
 
+  // Stock Portfolio Configuration
+  stockPortfolio: {
+    enabled: true,
+    title: "Live Stock Portfolio",
+    subtitle: "Real-time portfolio tracking powered by AI-driven analytics",
+    displaySettings: {
+      showValues: true, // Allow users to hide/show values
+      autoRefresh: true, // Auto-refresh every 30 seconds
+      refreshInterval: 30000, // 30 seconds
+      defaultTab: "overview" // overview, holdings, sectors
+    },
+    // Demo holdings - replace with real data or API integration
+    holdings: [
+      {
+        symbol: "AAPL",
+        name: "Apple Inc.",
+        shares: 50,
+        purchasePrice: 150.00,
+        sector: "Technology"
+      },
+      {
+        symbol: "GOOGL",
+        name: "Alphabet Inc.",
+        shares: 25,
+        purchasePrice: 2500.00,
+        sector: "Technology"
+      },
+      {
+        symbol: "MSFT",
+        name: "Microsoft Corporation",
+        shares: 40,
+        purchasePrice: 300.00,
+        sector: "Technology"
+      },
+      {
+        symbol: "TSLA",
+        name: "Tesla Inc.",
+        shares: 30,
+        purchasePrice: 200.00,
+        sector: "Automotive"
+      },
+      {
+        symbol: "NVDA",
+        name: "NVIDIA Corporation",
+        shares: 20,
+        purchasePrice: 400.00,
+        sector: "Technology"
+      },
+      {
+        symbol: "JPM",
+        name: "JPMorgan Chase & Co.",
+        shares: 35,
+        purchasePrice: 140.00,
+        sector: "Financial"
+      }
+    ],
+    // API Configuration (for future real data integration)
+    api: {
+      provider: "alphavantage", // alphavantage, yahoo, iex
+      apiKey: "YOUR_API_KEY_HERE",
+      updateInterval: 300000, // 5 minutes for real API calls
+      endpoints: {
+        quote: "https://www.alphavantage.co/query?function=GLOBAL_QUOTE",
+        batch: "https://www.alphavantage.co/query?function=BATCH_STOCK_QUOTES"
+      }
+    },
+    // Display customization
+    ui: {
+      theme: "professional", // professional, modern, minimal
+      colors: {
+        positive: "#10B981", // Green for gains
+        negative: "#EF4444", // Red for losses
+        neutral: "#6B7280"   // Gray for neutral
+      },
+      charts: {
+        enabled: true,
+        type: "line", // line, candlestick, area
+        timeframe: "1D" // 1D, 1W, 1M, 3M, 1Y
+      }
+    }
+  },
+
   // Contact Information
   contact: {
     title: "Let's Build the Future of Finance Together",
@@ -159,6 +241,55 @@ export const siteConfig = {
       metaTitle: "FinAI LLC - AI-Powered Financial Solutions",
       metaDescription: "Transform your financial operations with cutting-edge AI solutions. Portfolio management, fraud detection, and intelligent automation.",
       keywords: ["fintech", "AI", "financial technology", "machine learning", "portfolio management", "fraud detection"]
+    }
+  },
+
+  // Stock Analysis & Ticker Configuration
+  stockAnalysis: {
+    enabled: true,
+    title: "AI-Powered Stock Analysis",
+    subtitle: "Advanced stock analysis with machine learning predictions, technical indicators, and options trading insights",
+    features: {
+      realTimeData: true,
+      technicalAnalysis: true,
+      aiPredictions: true,
+      optionsChain: true,
+      sentimentAnalysis: true,
+      riskMetrics: true
+    },
+    // Prediction Models Configuration
+    predictions: {
+      timeframes: ["nextDay", "nextWeek", "nextMonth"],
+      algorithms: ["LSTM", "Technical Analysis", "Sentiment Analysis"],
+      confidenceThreshold: 60, // Minimum confidence to show predictions
+      updateInterval: 300000 // 5 minutes
+    },
+    // Technical Indicators
+    technicalIndicators: [
+      "RSI", "MACD", "Bollinger Bands", "SMA", "EMA", 
+      "Stochastic", "Williams %R", "ATR"
+    ],
+    // Options Trading
+    options: {
+      enabled: true,
+      greeks: ["delta", "gamma", "theta", "vega", "rho"],
+      strategies: ["covered_call", "protective_put", "straddle", "strangle"],
+      maxExpiration: 365 // days
+    },
+    // Risk Management
+    riskMetrics: {
+      var95: true, // Value at Risk 95%
+      maxDrawdown: true,
+      sharpeRatio: true,
+      beta: true,
+      volatility: true
+    },
+    // Data Sources (for future real API integration)
+    dataSources: {
+      primary: "alphavantage", // alphavantage, polygon, finnhub
+      backup: "yahoo",
+      newsAPI: "newsapi",
+      socialSentiment: "twitter"
     }
   }
 }
